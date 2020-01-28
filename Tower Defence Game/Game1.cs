@@ -9,18 +9,22 @@ namespace TowerDefenceGame
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+        Map map;
         
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferWidth = 950;  
+            graphics.PreferredBackBufferHeight = 800;  
             Content.RootDirectory = "Content";
         }
 
         
         protected override void Initialize()
         {
-            
-
+            Assets.LoadContent(Content);
+            map = new Map();
             base.Initialize();
         }
 
@@ -29,8 +33,9 @@ namespace TowerDefenceGame
         {
             
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            Assets.CreatePixel(GraphicsDevice);
+            map.BuildMap();
 
-            
         }
 
         
@@ -45,7 +50,9 @@ namespace TowerDefenceGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            
+            //För test
+            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+                map.BuildMap();
 
             base.Update(gameTime);
         }
@@ -55,8 +62,12 @@ namespace TowerDefenceGame
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            
+            spriteBatch.Begin();
 
+            //Rita ut kartan
+            map.DrawMap(spriteBatch);
+
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }

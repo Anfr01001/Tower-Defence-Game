@@ -21,3 +21,26 @@ C:\Users\banan\Desktop\Monogame-template-master\Tower Defence Game\Tower Defence
 C:\Users\banan\Desktop\Monogame-template-master\Tower Defence Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.csproj.CopyComplete
 C:\Users\banan\Desktop\Monogame-template-master\Tower Defence Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.exe
 C:\Users\banan\Desktop\Monogame-template-master\Tower Defence Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.pdb
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Tower Defence Game.exe
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Tower Defence Game.pdb
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.csprojAssemblyReference.cache
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.csproj.CoreCompileInputs.cache
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.csproj.CopyComplete
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.exe
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.pdb
