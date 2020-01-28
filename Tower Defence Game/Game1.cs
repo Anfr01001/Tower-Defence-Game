@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Input.Touch;
 
 namespace TowerDefenceGame
 {
@@ -55,8 +56,9 @@ namespace TowerDefenceGame
             //För test
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
                 map.BuildMap();
+            //För test
 
-            
+
             enemyController.Update(gameTime);
 
             base.Update(gameTime);
@@ -73,6 +75,7 @@ namespace TowerDefenceGame
             map.DrawMap(spriteBatch);
             //Rita ut fienden
             enemyController.Draw(spriteBatch);
+
             spriteBatch.End();
             base.Draw(gameTime);
         }

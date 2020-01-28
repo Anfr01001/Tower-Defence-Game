@@ -11,6 +11,8 @@ namespace TowerDefenceGame {
         private double TimeBetweenEnemys = 1;
         private double timeToSpawn = 0;
 
+        Random r = new Random();
+
         // Huvud listam med Fiender
         List<EnemyBase> EnemyList = new List<EnemyBase>();
         Map map;
@@ -24,8 +26,10 @@ namespace TowerDefenceGame {
 
             if (gameTime.TotalGameTime.TotalSeconds >= timeToSpawn) {
                 //tiden har gått lägg till fiende
-                EnemyList.Add(new BasicEnemy(map));
-
+                if (r.Next(0,3) < 2)
+                    EnemyList.Add(new BasicEnemy(map));
+                else
+                    EnemyList.Add(new BigEnemy(map));
 
                 timeToSpawn = gameTime.TotalGameTime.TotalSeconds + TimeBetweenEnemys;
             }

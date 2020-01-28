@@ -54,3 +54,4 @@ C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x8
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\UpsideTurnright.xnb
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\TurnLeft2.xnb
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\TurnRight2.xnb
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\BigRockMonster.xnb

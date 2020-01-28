@@ -18,7 +18,7 @@ namespace TowerDefenceGame {
         public bool dead = false;
         protected Texture2D texture = Assets.Pixel;
 
-        private int pathblock = 1; // Hur långt den har kommit i targets
+        private int pathblock = 1; // Hur långt den har kommit i targets (för movement)
         private Vector2 target;
 
         private List<MapBlock> Targets = new List<MapBlock>();
@@ -30,6 +30,7 @@ namespace TowerDefenceGame {
                 if (item.ispath)
                     Targets.Add(item);
             }
+
             //börja vid första blocket
             pos = Targets[0].center;
             target = Targets[pathblock].center;

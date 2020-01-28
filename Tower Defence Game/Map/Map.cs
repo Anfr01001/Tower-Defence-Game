@@ -9,47 +9,38 @@ using Microsoft.Xna.Framework.Graphics;
 namespace TowerDefenceGame {
     class Map {
         Random r = new Random();
+
         public List<MapBlock> Mapblocklist = new List<MapBlock>();
-        //Värje del av kartan är 50 stor * 16 blir 800pixlar totalt 
-        int[,] MapArray;
+        
+        private int[,] MapArray;
         private int tempY, tempX;
 
-        int todo;
-
-
-        private MapBlock temp;
+        private int todo;
 
         public void BuildMap() {
             //Ränsa och skapa ny så att man kan skapa ny karta om man är missnöjd
             Mapblocklist.Clear();
-            
             MapArray = new int[17, 17];
 
-            //starta random ett steg in från värje sida
+            //starta random ett steg in från värje sida (förts väg biten)
             tempX = r.Next(1, 14);
-            tempY = 0;
+            tempY = -1;
 
             //1 menas kommer leda till att den plattan blir en "path"
-            MapArray[tempX, tempY] = 1;
-            Mapblocklist.Add(new MapBlock(new Vector2(tempX * 50, tempY * 50), true, Assets.RoadDown));
+            //gå ner 3 stag i början 
+            for (int i = 0; i < 3; i++) {
+                MapArray[tempX, ++tempY] = 1; //++ före för att få med alla rutor (öven den första som annars kulle vatit -1)
+                Mapblocklist.Add(new MapBlock(new Vector2(tempX * 50, tempY * 50), true, Assets.RoadDown));
+                
+            }
             
-
-            MapArray[tempX, tempY++] = 1;
-            Mapblocklist.Add(new MapBlock(new Vector2(tempX * 50, tempY * 50), true, Assets.RoadDown));
-            MapArray[tempX, tempY++] = 1;
-            Mapblocklist.Add(new MapBlock(new Vector2(tempX * 50, tempY * 50), true, Assets.RoadDown));
-
-
-
-
             //Generera random en väg från toppen till botten 
             // 2steg i taget för att få en lite snyggare map
             while (tempY < 15) {
-                todo = r.Next(0, 6); // 5st lägen för höger och vänster är 2 (så mappen breder ut sig mer)
+                todo = r.Next(0, 6); // 5st lägen pga höger och vänster är 2(så att det blir större chans) (så mappen breder ut sig mer)
                 
                 //Gör det 2 gånger för att få snyggare teräng inte lika hoppig
                 for (int i = 0; i <= 1; i++) {
-
 
                     switch (todo) {
 
@@ -99,7 +90,7 @@ namespace TowerDefenceGame {
 
 
 
-            //Gör alla som inte är path til gärs
+            //Gör allt som inte är path til gärs
             for (int y = 0; y <= 15; y++) {
                 for (int x = 0; x <= 15; x++) {
 
