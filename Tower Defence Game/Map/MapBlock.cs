@@ -14,11 +14,14 @@ namespace TowerDefenceGame {
         public bool ispath { get; }
         public Color color { get; }
 
+        public Texture2D texture;
+
         public Vector2 center { get; }
 
-        public MapBlock(Vector2 pos, bool ispath) {
+        public MapBlock(Vector2 pos, bool ispath, Texture2D texture) {
             this.pos = pos;
             this.ispath = ispath;
+            this.texture = texture;
             color = Color.White;
             center = new Vector2(pos.X + 25, pos.Y + 25);
             rectangle = new Rectangle((int)pos.X, (int)pos.Y, size, size);

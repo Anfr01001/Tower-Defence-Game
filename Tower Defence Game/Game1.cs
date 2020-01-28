@@ -17,7 +17,7 @@ namespace TowerDefenceGame
         {
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferWidth = 950;  
-            graphics.PreferredBackBufferHeight = 1000;  
+            graphics.PreferredBackBufferHeight = 800;  
             Content.RootDirectory = "Content";
         }
 

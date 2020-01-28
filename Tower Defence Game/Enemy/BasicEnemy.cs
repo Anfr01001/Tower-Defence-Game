@@ -10,7 +10,7 @@ namespace TowerDefenceGame {
     class BasicEnemy : EnemyBase {
 
         public BasicEnemy(Map map) : base(map) {
-            size = 10;
+            size = 50;
             hp = 20;
             speed = 2f; // 1 block per sekund
             color = Color.White;

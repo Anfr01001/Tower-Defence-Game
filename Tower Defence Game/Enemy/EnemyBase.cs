@@ -37,7 +37,7 @@ namespace TowerDefenceGame {
 
         public void Update(GameTime gameTime) {
             Movement(gameTime);
-            rectangle = new Rectangle((int)pos.X ,(int)pos.Y, size,size);
+            rectangle = new Rectangle((int)pos.X - size/2 ,(int)pos.Y - size / 2, size,size);
 
             //Om spelaren är under mapen är han död och tar hp
             if (pos.Y > 800) {
