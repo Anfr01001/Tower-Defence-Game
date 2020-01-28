@@ -11,12 +11,13 @@ namespace TowerDefenceGame
         SpriteBatch spriteBatch;
 
         Map map;
+        EnemyController enemyController;
         
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferWidth = 950;  
-            graphics.PreferredBackBufferHeight = 800;  
+            graphics.PreferredBackBufferHeight = 1000;  
             Content.RootDirectory = "Content";
         }
 
@@ -25,6 +26,7 @@ namespace TowerDefenceGame
         {
             Assets.LoadContent(Content);
             map = new Map();
+            enemyController = new EnemyController(map);
             base.Initialize();
         }
 
@@ -54,6 +56,9 @@ namespace TowerDefenceGame
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
                 map.BuildMap();
 
+            
+            enemyController.Update(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -66,7 +71,8 @@ namespace TowerDefenceGame
 
             //Rita ut kartan
             map.DrawMap(spriteBatch);
-
+            //Rita ut fienden
+            enemyController.Draw(spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
         }

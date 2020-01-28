@@ -44,3 +44,6 @@ C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.csproj.CopyComplete
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.exe
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.pdb
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\Text.xnb
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\Rockenemy.xnb
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\RockMonster.xnb

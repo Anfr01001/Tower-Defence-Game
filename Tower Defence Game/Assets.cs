@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 namespace TowerDefenceGame {
     static class Assets {
         public static Texture2D Pixel;
-        public static SpriteFont UIFont;
+        public static Texture2D RockEnemy;
+        public static SpriteFont textfont;
 
         public static void CreatePixel(GraphicsDevice device) {
 
@@ -19,7 +20,9 @@ namespace TowerDefenceGame {
         }
 
         public static void LoadContent(ContentManager content) {
-            //UIFont = content.Load<SpriteFont>("UIFont");
+            textfont = content.Load<SpriteFont>("Text");
+            RockEnemy = content.Load<Texture2D>("RockMonster");
+            
         }
 
     }
