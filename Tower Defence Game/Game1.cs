@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Input.Touch;
 
 namespace TowerDefenceGame
 {
@@ -13,6 +12,7 @@ namespace TowerDefenceGame
 
         Map map;
         EnemyController enemyController;
+        Menu BuyMeny;
         
         public Game1()
         {
@@ -26,8 +26,11 @@ namespace TowerDefenceGame
         protected override void Initialize()
         {
             Assets.LoadContent(Content);
+            this.IsMouseVisible = true;
+
             map = new Map();
             enemyController = new EnemyController(map);
+            BuyMeny = new Menu(new Vector2(800, 0), 150,800);
             base.Initialize();
         }
 
@@ -58,6 +61,10 @@ namespace TowerDefenceGame
                 map.BuildMap();
             //För test
 
+            if (Mouse.GetState().LeftButton == ButtonState.Pressed) {
+                BuyMeny.MouseKlick(Mouse.GetState().Position);
+            }
+
 
             enemyController.Update(gameTime);
 
@@ -76,6 +83,7 @@ namespace TowerDefenceGame
             //Rita ut fienden
             enemyController.Draw(spriteBatch);
 
+            BuyMeny.draw(spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
         }
