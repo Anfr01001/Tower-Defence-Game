@@ -27,14 +27,15 @@ namespace TowerDefenceGame
         protected override void Initialize()
         {
             Assets.LoadContent(Content);
+            Controllers.Setup(towerController);
             this.IsMouseVisible = true;
 
             map = new Map();
             enemyController = new EnemyController(map);
-            BuyMeny = new Menu(new Vector2(800, 0), 150,800);
-			towerController = new TowerController(map); 
+			towerController = new TowerController(map);
+            BuyMeny = new Menu(new Vector2(800, 0), 150, 800, towerController);
 
-			base.Initialize();
+            base.Initialize();
         }
 
         
@@ -61,7 +62,8 @@ namespace TowerDefenceGame
 
             //För test
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
-                map.BuildMap();
+                //map.BuildMap();
+                towerController.BoughtTower(1);
             //För test
 
             if (Mouse.GetState().LeftButton == ButtonState.Pressed) {

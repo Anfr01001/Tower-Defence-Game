@@ -28,7 +28,7 @@ namespace TowerDefenceGame
 
 		public void BoughtTower(int type)
 		{
-			TowerLista.Add(new )
+            TowerLista.Add(new BasicTower(map));
 		}
 
 		public void Draw(SpriteBatch spriteBatch)

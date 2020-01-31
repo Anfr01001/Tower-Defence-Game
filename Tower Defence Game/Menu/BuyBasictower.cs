@@ -9,15 +9,15 @@ namespace TowerDefenceGame
 {
 	class BuyBasictower : Button
 	{
-
-		public BuyBasictower(String text, Vector2 pos, int size) : base (text,pos,size)
+        TowerController towerController;
+		public BuyBasictower(String text, Vector2 pos, int size, TowerController towerController) : base (text,pos,size)
 		{
-
+            this.towerController = towerController;
 		}
 
 		public override void OnClick()
 		{
-			
+            towerController.BoughtTower(1);
 		}
 	}
 }

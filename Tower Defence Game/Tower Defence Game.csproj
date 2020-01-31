@@ -43,9 +43,10 @@
   <ItemGroup>
     <Compile Include="Assets.cs" />
     <Compile Include="BasicTower.cs" />
-    <Compile Include="Button.cs" />
-    <Compile Include="BuyBasictower.cs" />
-    <Compile Include="Menu.cs" />
+    <Compile Include="Controllers.cs" />
+    <Compile Include="Menu\Button.cs" />
+    <Compile Include="Menu\BuyBasictower.cs" />
+    <Compile Include="Menu\Menu.cs" />
     <Compile Include="Enemy\BigEnemy.cs" />
     <Compile Include="Enemy\BasicEnemy.cs" />
     <Compile Include="Enemy\EnemyBase.cs" />

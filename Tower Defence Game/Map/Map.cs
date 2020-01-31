@@ -12,7 +12,7 @@ namespace TowerDefenceGame {
 
         public List<MapBlock> Mapblocklist = new List<MapBlock>();
         
-        private int[,] MapArray;
+        public int[,] MapArray;
         private int tempY, tempX;
 
         private int todo;

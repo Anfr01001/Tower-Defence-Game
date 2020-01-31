@@ -18,7 +18,6 @@ namespace TowerDefenceGame {
             this.pos = pos;
             this.size = size;
             rectangle = new Rectangle((int)pos.X, (int)pos.Y, size, size);
-
         }
 
         public virtual void OnClick() {
