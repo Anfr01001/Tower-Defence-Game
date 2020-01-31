@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace TowerDefenceGame {
     class Button {
-        private Vector2 pos;
-        private int size;
-        private string text = "";
+        protected Vector2 pos;
+        protected int size;
+        protected string text = "";
         public Rectangle rectangle;
 
         public Button(String text, Vector2 pos, int size) {
@@ -21,9 +21,8 @@ namespace TowerDefenceGame {
 
         }
 
-        public void OnClick() {
+        public virtual void OnClick() {
             text = "klickad";
-            //Skapa torn
         }
 
 

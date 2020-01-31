@@ -55,3 +55,36 @@ C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x8
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\TurnLeft2.xnb
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\TurnRight2.xnb
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\BigRockMonster.xnb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\BigRockMonster.xnb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\Grass.xnb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\RoadSide.xnb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\RoadUp.xnb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\RockMonster.xnb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\Text.xnb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\TurnLeft2.xnb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\TurnRight2.xnb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\UpsideTurnleft.xnb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\UpsideTurnright.xnb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Tower Defence Game.exe
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Tower Defence Game.pdb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.csprojAssemblyReference.cache
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.csproj.CoreCompileInputs.cache
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.csproj.CopyComplete
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.exe
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.pdb

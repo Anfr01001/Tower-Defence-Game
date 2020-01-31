@@ -13,6 +13,7 @@ namespace TowerDefenceGame
         Map map;
         EnemyController enemyController;
         Menu BuyMeny;
+		TowerController towerController;
         
         public Game1()
         {
@@ -31,7 +32,9 @@ namespace TowerDefenceGame
             map = new Map();
             enemyController = new EnemyController(map);
             BuyMeny = new Menu(new Vector2(800, 0), 150,800);
-            base.Initialize();
+			towerController = new TowerController(map); 
+
+			base.Initialize();
         }
 
         
@@ -65,8 +68,9 @@ namespace TowerDefenceGame
                 BuyMeny.MouseKlick(Mouse.GetState().Position);
             }
 
+			towerController.Update(gameTime);
 
-            enemyController.Update(gameTime);
+			enemyController.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -82,7 +86,7 @@ namespace TowerDefenceGame
             map.DrawMap(spriteBatch);
             //Rita ut fienden
             enemyController.Draw(spriteBatch);
-
+			towerController.Draw(spriteBatch);
             BuyMeny.draw(spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
