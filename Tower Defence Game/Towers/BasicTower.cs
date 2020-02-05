@@ -14,7 +14,10 @@ namespace TowerDefenceGame
 		{
             rectangle = new Rectangle(pos.ToPoint(), new Point(50,50));
             range = 200;
-		}
+            damage = 15;
+            texture = Assets.TowerBasic;
+
+        }
 
 	}
 }

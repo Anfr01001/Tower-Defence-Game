@@ -10,7 +10,7 @@ namespace TowerDefenceGame {
     class EnemyBase {
         //Vad alla fiender kommer behöva
         protected int size;
-        protected int hp;
+        protected float hp;
         protected float speed; // blocks per sekund
         public Vector2 pos;
         protected Rectangle rectangle;
@@ -23,8 +23,6 @@ namespace TowerDefenceGame {
         private Vector2 target;
 
         private List<MapBlock> Targets = new List<MapBlock>();
-
-        int test;
 
         public EnemyBase() {
             // Sortera ut paths så vi kan följa dem
@@ -46,12 +44,14 @@ namespace TowerDefenceGame {
             if (pos.Y > 800) {
                 dead = true;
             }
-
-            test = i;
         }
 
-        public void tempKill() {
-            dead = true;
+        public void TakeDamage(float damage) {
+            hp -= damage;
+
+            if(hp < 1) {
+                dead = true;
+            }
         }
 
         public void Movement(GameTime gameTime) {
@@ -94,7 +94,7 @@ namespace TowerDefenceGame {
             */
             
             spriteBatch.Draw(texture, rectangle, color);
-            spriteBatch.DrawString(Assets.textfont, test.ToString(), pos, Color.Black);
+            spriteBatch.DrawString(Assets.textfont, hp.ToString(), pos, Color.Black);
 
         }
 

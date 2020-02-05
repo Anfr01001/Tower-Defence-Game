@@ -11,7 +11,7 @@ namespace TowerDefenceGame {
     class TowerBase {
         //Fixa så att knappen bara pangar en gång
 
-
+        protected int damage = 0; 
         protected Vector2 pos;
         protected Texture2D texture = Assets.Pixel;
         protected Rectangle rectangle;
@@ -28,8 +28,6 @@ namespace TowerDefenceGame {
         List<EnemyBase> Fiendelista = new List<EnemyBase>();
         EnemyBase Target;
 
-        float testtemp = 123f;
-
         public TowerBase() {
 
         }
@@ -38,8 +36,9 @@ namespace TowerDefenceGame {
             if (beingPlaced)
                 FindPlace();
             else {
+                //kommer retunera null därför try catch
                 try {
-                    findTarget().tempKill();
+                    findTarget().TakeDamage(damage * (float)gameTime.ElapsedGameTime.TotalSeconds);
                 } catch { }
                 
                 //osv
