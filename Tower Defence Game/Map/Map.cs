@@ -7,17 +7,17 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace TowerDefenceGame {
-    class Map {
-        Random r = new Random();
+    static class Map {
+        static Random r = new Random();
 
-        public List<MapBlock> Mapblocklist = new List<MapBlock>();
+        public static List<MapBlock> Mapblocklist = new List<MapBlock>();
         
-        public int[,] MapArray;
-        private int tempY, tempX;
+        public static int[,] MapArray;
+        private static int tempY, tempX;
 
-        private int todo;
+        private static int todo;
 
-        public void BuildMap() {
+        public static void BuildMap() {
             //Ränsa och skapa ny så att man kan skapa ny karta om man är missnöjd
             Mapblocklist.Clear();
             MapArray = new int[17, 17];
@@ -101,7 +101,7 @@ namespace TowerDefenceGame {
                 }
             }
 
-        public void DrawMap(SpriteBatch spriteBatch) {
+        public static void DrawMap(SpriteBatch spriteBatch) {
 
             foreach (MapBlock item in Mapblocklist) {
                     spriteBatch.Draw(item.texture, item.rectangle, item.color);

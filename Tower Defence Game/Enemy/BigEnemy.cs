@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace TowerDefenceGame {
     class BigEnemy : EnemyBase {
 
-        public BigEnemy(Map map) : base(map) {
+        public BigEnemy() {
         size = 50;
         hp = 50;
         speed = 1f; // 1 block per sekund

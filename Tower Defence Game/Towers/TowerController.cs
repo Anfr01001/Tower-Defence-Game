@@ -8,17 +8,11 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace TowerDefenceGame
 {
-	class TowerController
+	static class TowerController
 	{
-		Map map;
-		List<TowerBase> TowerLista = new List<TowerBase>();
+        static List<TowerBase> TowerLista = new List<TowerBase>();
 
-		public TowerController(Map map)
-		{
-			this.map = map;
-		}
-
-		public void Update(GameTime gameTime)
+		public static void Update(GameTime gameTime)
 		{
 			foreach (TowerBase Tower in TowerLista)
 			{
@@ -26,12 +20,12 @@ namespace TowerDefenceGame
 			}
 		}
 
-		public void BoughtTower(int type)
+		public static void BoughtTower(int type)
 		{
-            TowerLista.Add(new BasicTower(map));
+            TowerLista.Add(new BasicTower());
 		}
 
-		public void Draw(SpriteBatch spriteBatch)
+		public static void Draw(SpriteBatch spriteBatch)
 		{
 			foreach (TowerBase Tower in TowerLista)
 			{

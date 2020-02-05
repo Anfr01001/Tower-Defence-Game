@@ -12,21 +12,23 @@ namespace TowerDefenceGame {
         protected int size;
         protected int hp;
         protected float speed; // blocks per sekund
-        protected Vector2 pos;
+        public Vector2 pos;
         protected Rectangle rectangle;
         protected Color color;
         public bool dead = false;
         protected Texture2D texture = Assets.Pixel;
 
-        private int pathblock = 1; // Hur långt den har kommit i targets (för movement)
+        public int pathblock = 1; // Hur långt den har kommit i targets (för movement)
+        public double distanceToTarget;
         private Vector2 target;
 
         private List<MapBlock> Targets = new List<MapBlock>();
 
+        int test;
 
-        public EnemyBase(Map map) {
+        public EnemyBase() {
             // Sortera ut paths så vi kan följa dem
-            foreach (MapBlock item in map.Mapblocklist) {
+            foreach (MapBlock item in Map.Mapblocklist) {
                 if (item.ispath)
                     Targets.Add(item);
             }
@@ -36,7 +38,7 @@ namespace TowerDefenceGame {
             target = Targets[pathblock].center;
         }
 
-        public void Update(GameTime gameTime) {
+        public void Update(GameTime gameTime, int i) {
             Movement(gameTime);
             rectangle = new Rectangle((int)pos.X - size/2 ,(int)pos.Y - size / 2, size,size);
 
@@ -45,9 +47,12 @@ namespace TowerDefenceGame {
                 dead = true;
             }
 
-            
+            test = i;
         }
 
+        public void tempKill() {
+            dead = true;
+        }
 
         public void Movement(GameTime gameTime) {
             
@@ -63,7 +68,8 @@ namespace TowerDefenceGame {
             }
 
             //Om den är nära target byt till nästa target samt centrera
-            if ( Math.Sqrt(Math.Pow(target.X - pos.X, 2) + Math.Pow(target.Y - pos.Y, 2)) < 3) {
+            distanceToTarget = Math.Sqrt(Math.Pow(target.X - pos.X, 2) + Math.Pow(target.Y - pos.Y, 2));
+            if (distanceToTarget < 3) {
                 pos = target; // Korrgera för den lilla biten kvar (movement är inte exakta ints)
                 try {
                     target = Targets[pathblock++].center;
@@ -76,13 +82,20 @@ namespace TowerDefenceGame {
         }
 
         public void Draw(SpriteBatch spriteBatch) {
-            
+
             /* Skriv ut nummrerne på path rutorna som den ska följa
             for (int i = 0; i < Targets.Count; i++) {
                 spriteBatch.DrawString(Assets.textfont, i.ToString() , Targets[i].center, Color.Black);
             }
+
+            Också test
+
+            
             */
+            
             spriteBatch.Draw(texture, rectangle, color);
+            spriteBatch.DrawString(Assets.textfont, test.ToString(), pos, Color.Black);
+
         }
 
 

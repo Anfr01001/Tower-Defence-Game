@@ -10,9 +10,10 @@ namespace TowerDefenceGame
 	class BasicTower : TowerBase
 	{
 		
-		public BasicTower(Map map) : base(map)
+		public BasicTower() : base()
 		{
             rectangle = new Rectangle(pos.ToPoint(), new Point(50,50));
+            range = 200;
 		}
 
 	}

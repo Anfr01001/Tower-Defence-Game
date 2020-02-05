@@ -10,10 +10,9 @@ namespace TowerDefenceGame
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        Map map;
-        EnemyController enemyController;
         Menu BuyMeny;
-		TowerController towerController;
+
+        bool canclick = true;
         
         public Game1()
         {
@@ -27,13 +26,8 @@ namespace TowerDefenceGame
         protected override void Initialize()
         {
             Assets.LoadContent(Content);
-            Controllers.Setup(towerController);
             this.IsMouseVisible = true;
-
-            map = new Map();
-            enemyController = new EnemyController(map);
-			towerController = new TowerController(map);
-            BuyMeny = new Menu(new Vector2(800, 0), 150, 800, towerController);
+            BuyMeny = new Menu(new Vector2(800, 0), 150, 800);
 
             base.Initialize();
         }
@@ -44,7 +38,7 @@ namespace TowerDefenceGame
             
             spriteBatch = new SpriteBatch(GraphicsDevice);
             Assets.CreatePixel(GraphicsDevice);
-            map.BuildMap();
+            Map.BuildMap();
 
         }
 
@@ -62,17 +56,23 @@ namespace TowerDefenceGame
 
             //För test
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
-                //map.BuildMap();
-                towerController.BoughtTower(1);
+                Map.BuildMap();
+                //towerController.BoughtTower(1);
             //För test
 
-            if (Mouse.GetState().LeftButton == ButtonState.Pressed) {
+
+            if (Mouse.GetState().LeftButton == ButtonState.Pressed && canclick) {
                 BuyMeny.MouseKlick(Mouse.GetState().Position);
+                canclick = false;
             }
 
-			towerController.Update(gameTime);
+            //Kan göras bättre
+            if (Mouse.GetState().LeftButton == ButtonState.Released)
+                canclick = true;
 
-			enemyController.Update(gameTime);
+			TowerController.Update(gameTime);
+
+			EnemyController.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -85,10 +85,10 @@ namespace TowerDefenceGame
             spriteBatch.Begin();
 
             //Rita ut kartan
-            map.DrawMap(spriteBatch);
+            Map.DrawMap(spriteBatch);
             //Rita ut fienden
-            enemyController.Draw(spriteBatch);
-			towerController.Draw(spriteBatch);
+            EnemyController.Draw(spriteBatch);
+			TowerController.Draw(spriteBatch);
             BuyMeny.draw(spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);

@@ -42,8 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets.cs" />
-    <Compile Include="BasicTower.cs" />
-    <Compile Include="Controllers.cs" />
+    <Compile Include="Towers\BasicTower.cs" />
     <Compile Include="Menu\Button.cs" />
     <Compile Include="Menu\BuyBasictower.cs" />
     <Compile Include="Menu\Menu.cs" />
@@ -56,8 +55,8 @@
     <Compile Include="Map\MapBlock.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TowerBase.cs" />
-    <Compile Include="TowerController.cs" />
+    <Compile Include="Towers\TowerBase.cs" />
+    <Compile Include="Towers\TowerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

@@ -13,6 +13,7 @@ namespace TowerDefenceGame {
         protected string text = "";
         public Rectangle rectangle;
 
+
         public Button(String text, Vector2 pos, int size) {
             this.text = text;
             this.pos = pos;

@@ -13,18 +13,17 @@ namespace TowerDefenceGame {
         private Vector2 pos;
         private int BackGorundwidth;
         private int BackGroundhight;
-
         private List<Button> buttons = new List<Button>();
 
         private Rectangle ColitionRectangle;
 
-        public Menu(Vector2 pos, int width, int hight, TowerController towerController) {
+        public Menu(Vector2 pos, int width, int hight) {
             this.pos = pos;
             BackGorundwidth = width;
             BackGroundhight = hight;
 
             //Lägg till knappar
-            buttons.Add(new BuyBasictower("Tower", new Vector2(835, 20), 80, towerController));
+            buttons.Add(new BuyBasictower("Tower", new Vector2(835, 20), 80));
 
         }
         
