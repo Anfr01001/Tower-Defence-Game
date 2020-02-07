@@ -57,23 +57,29 @@ namespace TowerDefenceGame
             //För test
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
                 Map.BuildMap();
-                //towerController.BoughtTower(1);
+            //towerController.BoughtTower(1);
             //För test
 
+            if (!Player.dead)
+            {
+                // Om man klickar ge positionen till Menyn som kollar om man klickar på något
+                if (Mouse.GetState().LeftButton == ButtonState.Pressed && canclick)
+                {
+                    BuyMeny.MouseKlick(Mouse.GetState().Position);
+                    canclick = false;
+                }
 
-            if (Mouse.GetState().LeftButton == ButtonState.Pressed && canclick) {
-                BuyMeny.MouseKlick(Mouse.GetState().Position);
-                canclick = false;
+                //Kan göras bättre
+                if (Mouse.GetState().LeftButton == ButtonState.Released)
+                    canclick = true;
+
+                TowerController.Update(gameTime);
+
+                EnemyController.Update(gameTime);
+            } else
+            {
+                Exit();
             }
-
-            //Kan göras bättre
-            if (Mouse.GetState().LeftButton == ButtonState.Released)
-                canclick = true;
-
-			TowerController.Update(gameTime);
-
-			EnemyController.Update(gameTime);
-
             base.Update(gameTime);
         }
 
@@ -84,12 +90,12 @@ namespace TowerDefenceGame
 
             spriteBatch.Begin();
 
-            //Rita ut kartan
             Map.DrawMap(spriteBatch);
-            //Rita ut fienden
             EnemyController.Draw(spriteBatch);
 			TowerController.Draw(spriteBatch);
             BuyMeny.draw(spriteBatch);
+            Player.Draw(spriteBatch);
+
             spriteBatch.End();
             base.Draw(gameTime);
         }

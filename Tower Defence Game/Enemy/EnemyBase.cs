@@ -13,7 +13,7 @@ namespace TowerDefenceGame {
         protected float hp;
         protected float speed; // blocks per sekund
         public Vector2 pos;
-        protected Rectangle rectangle;
+        public Rectangle rectangle;
         protected Color color;
         public bool dead = false;
         protected Texture2D texture = Assets.Pixel;
@@ -43,6 +43,7 @@ namespace TowerDefenceGame {
             //Om spelaren är under mapen är han död och tar hp
             if (pos.Y > 800) {
                 dead = true;
+                Player.subtractLife(1);
             }
         }
 

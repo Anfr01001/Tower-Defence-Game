@@ -19,6 +19,8 @@ namespace TowerDefenceGame {
         private Vector2 Mousepos;
         protected int range = 0;
 
+        private EnemyBase taret;
+
         //Används som sorterad lista över mapblock. (sortering utifrån avstång till musen)
         List<EnemyBase> TempLista = new List<EnemyBase>();
 
@@ -38,7 +40,11 @@ namespace TowerDefenceGame {
             else {
                 //kommer retunera null därför try catch
                 try {
-                    findTarget().TakeDamage(damage * (float)gameTime.ElapsedGameTime.TotalSeconds);
+                    taret = findTarget();
+                    if (taret != null)
+                    {
+                        shoot(gameTime, taret);
+                    }    
                 } catch { }
                 
                 //osv
@@ -68,8 +74,8 @@ namespace TowerDefenceGame {
         }
         
 
-        protected void shoot() {
-
+        protected virtual void shoot(GameTime gameTime, EnemyBase target) {
+            target.TakeDamage(damage * (float)gameTime.ElapsedGameTime.TotalSeconds);
         }
 
         private void FindPlace() {
