@@ -29,7 +29,7 @@ namespace TowerDefenceGame {
         public static Texture2D TurnLeft2;
         public static Texture2D TurnRight2;
 
-        
+
         public static void CreatePixel(GraphicsDevice device) {
             //Standrad texture för test
             Pixel = new Texture2D(device, 1, 1);

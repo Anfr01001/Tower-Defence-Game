@@ -38,7 +38,7 @@ namespace TowerDefenceGame {
 
         public void Update(GameTime gameTime, int i) {
             Movement(gameTime);
-            rectangle = new Rectangle((int)pos.X - size/2 ,(int)pos.Y - size / 2, size,size);
+            rectangle = new Rectangle((int)pos.X - size / 2, (int)pos.Y - size / 2, size, size);
 
             //Om spelaren är under mapen är han död och tar hp
             if (pos.Y > 800) {
@@ -50,13 +50,13 @@ namespace TowerDefenceGame {
         public void TakeDamage(float damage) {
             hp -= damage;
 
-            if(hp < 1) {
+            if (hp < 1) {
                 dead = true;
             }
         }
 
         public void Movement(GameTime gameTime) {
-            
+
             //Gå mot nästa target (center av nästa path block enligt listan)
             if (pos.Y < target.Y) {
                 pos.Y += (speed * 50) * gameTime.ElapsedGameTime.Milliseconds / 1000;
@@ -78,7 +78,7 @@ namespace TowerDefenceGame {
                     // slut på targets (sätt target rakt under senaste för att gå ut ut kartn och där med förlora liv)
                     target = new Vector2(target.X, target.Y + 50);
                 }
-                
+
             }
         }
 
@@ -93,7 +93,7 @@ namespace TowerDefenceGame {
 
             
             */
-            
+
             spriteBatch.Draw(texture, rectangle, color);
             spriteBatch.DrawString(Assets.textfont, hp.ToString(), pos, Color.Black);
 

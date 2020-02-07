@@ -22,7 +22,7 @@ namespace TowerDefenceGame {
 
             if (gameTime.TotalGameTime.TotalSeconds >= timeToSpawn) {
                 //tiden har gått lägg till fiende
-                if (r.Next(0,3) < 2)
+                if (r.Next(0, 3) < 2)
                     EnemyList.Add(new BasicEnemy());
                 else
                     EnemyList.Add(new BigEnemy());
@@ -32,14 +32,14 @@ namespace TowerDefenceGame {
 
             for (int i = 0; i < EnemyList.Count; i++) {
                 if (!EnemyList[i].dead) {
-                        EnemyList[i].Update(gameTime, i);
+                    EnemyList[i].Update(gameTime, i);
                 } else {
                     EnemyList.RemoveAt(i);
                     i--;
                 }
-                    
-                
-            }   
+
+
+            }
 
         }
 

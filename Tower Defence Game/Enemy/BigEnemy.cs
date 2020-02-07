@@ -9,11 +9,11 @@ namespace TowerDefenceGame {
     class BigEnemy : EnemyBase {
 
         public BigEnemy() {
-        size = 50;
-        hp = 50;
-        speed = 1f; // 1 block per sekund
-        color = Color.White;
-        texture = Assets.BigRockEnemy;
+            size = 50;
+            hp = 50;
+            speed = 1f; // 1 block per sekund
+            color = Color.White;
+            texture = Assets.BigRockEnemy;
+        }
     }
-}
 }

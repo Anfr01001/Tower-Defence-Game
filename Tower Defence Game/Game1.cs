@@ -2,29 +2,25 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace TowerDefenceGame
-{
+namespace TowerDefenceGame {
 
-    public class Game1 : Game
-    {
+    public class Game1 : Game {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
         Menu BuyMeny;
 
         bool canclick = true;
-        
-        public Game1()
-        {
+
+        public Game1() {
             graphics = new GraphicsDeviceManager(this);
-            graphics.PreferredBackBufferWidth = 950;  
-            graphics.PreferredBackBufferHeight = 800;  
+            graphics.PreferredBackBufferWidth = 950;
+            graphics.PreferredBackBufferHeight = 800;
             Content.RootDirectory = "Content";
         }
 
-        
-        protected override void Initialize()
-        {
+
+        protected override void Initialize() {
             Assets.LoadContent(Content);
             this.IsMouseVisible = true;
             BuyMeny = new Menu(new Vector2(800, 0), 150, 800);
@@ -32,25 +28,22 @@ namespace TowerDefenceGame
             base.Initialize();
         }
 
-        
-        protected override void LoadContent()
-        {
-            
+
+        protected override void LoadContent() {
+
             spriteBatch = new SpriteBatch(GraphicsDevice);
             Assets.CreatePixel(GraphicsDevice);
             Map.BuildMap();
 
         }
 
-        
-        protected override void UnloadContent()
-        {
-            
+
+        protected override void UnloadContent() {
+
         }
 
-        
-        protected override void Update(GameTime gameTime)
-        {
+
+        protected override void Update(GameTime gameTime) {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
@@ -60,11 +53,9 @@ namespace TowerDefenceGame
             //towerController.BoughtTower(1);
             //För test
 
-            if (!Player.dead)
-            {
+            if (!Player.dead) {
                 // Om man klickar ge positionen till Menyn som kollar om man klickar på något
-                if (Mouse.GetState().LeftButton == ButtonState.Pressed && canclick)
-                {
+                if (Mouse.GetState().LeftButton == ButtonState.Pressed && canclick) {
                     BuyMeny.MouseKlick(Mouse.GetState().Position);
                     canclick = false;
                 }
@@ -76,23 +67,21 @@ namespace TowerDefenceGame
                 TowerController.Update(gameTime);
 
                 EnemyController.Update(gameTime);
-            } else
-            {
+            } else {
                 Exit();
             }
             base.Update(gameTime);
         }
 
-        
-        protected override void Draw(GameTime gameTime)
-        {
+
+        protected override void Draw(GameTime gameTime) {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
 
             Map.DrawMap(spriteBatch);
             EnemyController.Draw(spriteBatch);
-			TowerController.Draw(spriteBatch);
+            TowerController.Draw(spriteBatch);
             BuyMeny.draw(spriteBatch);
             Player.Draw(spriteBatch);
 

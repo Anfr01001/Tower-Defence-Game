@@ -23,7 +23,7 @@ namespace TowerDefenceGame {
             this.ispath = ispath;
             this.texture = texture;
             color = Color.White;
-            center = new Vector2(pos.X + size/2, pos.Y + size/2);
+            center = new Vector2(pos.X + size / 2, pos.Y + size / 2);
             rectangle = new Rectangle((int)pos.X, (int)pos.Y, size, size);
         }
 

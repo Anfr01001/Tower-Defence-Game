@@ -42,7 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets.cs" />
-    <Compile Include="Bullet.cs" />
+    <Compile Include="Towers\Bullet.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Towers\BasicTower.cs" />
     <Compile Include="Menu\Button.cs" />

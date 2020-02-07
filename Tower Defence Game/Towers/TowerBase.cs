@@ -11,7 +11,7 @@ namespace TowerDefenceGame {
     class TowerBase {
         //Fixa så att knappen bara pangar en gång
 
-        protected int damage = 0; 
+        protected int damage = 0;
         protected Vector2 pos;
         protected Texture2D texture = Assets.Pixel;
         protected Rectangle rectangle;
@@ -41,12 +41,11 @@ namespace TowerDefenceGame {
                 //kommer retunera null därför try catch
                 try {
                     taret = findTarget();
-                    if (taret != null)
-                    {
+                    if (taret != null) {
                         shoot(gameTime, taret);
-                    }    
+                    }
                 } catch { }
-                
+
                 //osv
             }
         }
@@ -70,9 +69,9 @@ namespace TowerDefenceGame {
                 return Target;
             } else {
                 return null;
-            } 
+            }
         }
-        
+
 
         protected virtual void shoot(GameTime gameTime, EnemyBase target) {
             target.TakeDamage(damage * (float)gameTime.ElapsedGameTime.TotalSeconds);

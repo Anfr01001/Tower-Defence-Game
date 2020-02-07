@@ -6,10 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TowerDefenceGame
-{
-    class Bullet
-    {
+namespace TowerDefenceGame {
+    class Bullet {
         private int size;
         private float speed = 10;
         private Vector2 pos;
@@ -20,8 +18,7 @@ namespace TowerDefenceGame
         public bool dead = false;
         private int damage;
 
-        public Bullet(Vector2 Startpos, int size, EnemyBase target, int damage)
-        {
+        public Bullet(Vector2 Startpos, int size, EnemyBase target, int damage) {
             pos = Startpos;
             this.size = size;
             this.target = target;
@@ -29,8 +26,7 @@ namespace TowerDefenceGame
             rectangle = new Rectangle((int)pos.X, (int)pos.Y, size, size);
         }
 
-        public void Update(GameTime gameTime)
-        {
+        public void Update(GameTime gameTime) {
             //Från ditt shooterspel
             direction = target.pos - pos;
             direction.Normalize();
@@ -38,15 +34,13 @@ namespace TowerDefenceGame
 
             rectangle = new Rectangle((int)pos.X, (int)pos.Y, size, size);
 
-            if (rectangle.Intersects(target.rectangle))
-            {
+            if (rectangle.Intersects(target.rectangle)) {
                 dead = true;
                 target.TakeDamage(damage);
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch)
-        {
+        public void Draw(SpriteBatch spriteBatch) {
             spriteBatch.Draw(Assets.Pixel, rectangle, color);
         }
     }

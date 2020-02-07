@@ -11,7 +11,7 @@ namespace TowerDefenceGame {
         static Random r = new Random();
 
         public static List<MapBlock> Mapblocklist = new List<MapBlock>();
-        
+
         public static int[,] MapArray;
         private static int tempY, tempX;
 
@@ -31,14 +31,14 @@ namespace TowerDefenceGame {
             for (int i = 0; i < 3; i++) {
                 MapArray[tempX, ++tempY] = 1; //++ före för att få med alla rutor (öven den första som annars kulle vatit -1)
                 Mapblocklist.Add(new MapBlock(new Vector2(tempX * 50, tempY * 50), true, Assets.RoadDown));
-                
+
             }
-            
+
             //Generera random en väg från toppen till botten 
             // 2steg i taget för att få en lite snyggare map
             while (tempY < 15) {
                 todo = r.Next(0, 6); // 5st lägen pga höger och vänster är 2(så att det blir större chans) (så mappen breder ut sig mer)
-                
+
                 //Gör det 2 gånger för att få snyggare teräng inte lika hoppig
                 for (int i = 0; i <= 1; i++) {
 
@@ -47,7 +47,7 @@ namespace TowerDefenceGame {
                         case 1: // down
                                 //Kolla om föregågende vag ska svänga (nu när vi vet vart den nya vägen är)
                             if (MapArray[tempX, tempY - 1] == 0) {
-                                if (MapArray[tempX + 1 , tempY] == 1) // om föregågende har en väg till höger
+                                if (MapArray[tempX + 1, tempY] == 1) // om föregågende har en väg till höger
                                     Mapblocklist.Last().texture = Assets.TurnRight2;
                                 else
                                     Mapblocklist.Last().texture = Assets.TurnLeft2;
@@ -96,15 +96,15 @@ namespace TowerDefenceGame {
 
                     if (MapArray[x, y] != 1)
                         Mapblocklist.Add(new MapBlock(new Vector2(x * 50, y * 50), false, Assets.Grass));
-                    }
-
                 }
+
             }
+        }
 
         public static void DrawMap(SpriteBatch spriteBatch) {
 
             foreach (MapBlock item in Mapblocklist) {
-                    spriteBatch.Draw(item.texture, item.rectangle, item.color);
+                spriteBatch.Draw(item.texture, item.rectangle, item.color);
             }
         }
 

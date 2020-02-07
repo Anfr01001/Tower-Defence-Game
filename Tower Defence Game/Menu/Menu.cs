@@ -26,7 +26,7 @@ namespace TowerDefenceGame {
             buttons.Add(new BuyBasictower("Tower", new Vector2(835, 20), 80));
 
         }
-        
+
         public void MouseKlick(Point pos) {
             ColitionRectangle = new Rectangle(pos.X, pos.Y, 1, 1);
 
@@ -39,7 +39,7 @@ namespace TowerDefenceGame {
         }
 
         public void draw(SpriteBatch spriteBatch) {
-            spriteBatch.Draw(Assets.Pixel, new Rectangle((int)pos.X,(int)pos.Y,BackGorundwidth,BackGroundhight), Color.Gray);
+            spriteBatch.Draw(Assets.Pixel, new Rectangle((int)pos.X, (int)pos.Y, BackGorundwidth, BackGroundhight), Color.Gray);
             foreach (Button button in buttons) {
                 button.draw(spriteBatch);
             }
