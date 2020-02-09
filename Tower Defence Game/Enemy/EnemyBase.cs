@@ -24,7 +24,10 @@ namespace TowerDefenceGame {
 
         private List<MapBlock> Targets = new List<MapBlock>();
 
+        protected Healthbar hpbar;
+
         public EnemyBase() {
+
             // Sortera ut paths så vi kan följa dem
             foreach (MapBlock item in Map.Mapblocklist) {
                 if (item.ispath)
@@ -45,6 +48,8 @@ namespace TowerDefenceGame {
                 dead = true;
                 Player.subtractLife(1);
             }
+
+            hpbar.Update(hp, new Vector2(pos.X - (size / 2), pos.Y + (size / 2)));
         }
 
         public void TakeDamage(float damage) {
@@ -84,18 +89,8 @@ namespace TowerDefenceGame {
 
         public void Draw(SpriteBatch spriteBatch) {
 
-            /* Skriv ut nummrerne på path rutorna som den ska följa
-            for (int i = 0; i < Targets.Count; i++) {
-                spriteBatch.DrawString(Assets.textfont, i.ToString() , Targets[i].center, Color.Black);
-            }
-
-            Också test
-
-            
-            */
-
             spriteBatch.Draw(texture, rectangle, color);
-            spriteBatch.DrawString(Assets.textfont, hp.ToString(), pos, Color.Black);
+            hpbar.Draw(spriteBatch);
 
         }
 

@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 namespace TowerDefenceGame {
     class BasicEnemy : EnemyBase {
 
-        public BasicEnemy() {
+        public BasicEnemy(){
             size = 40;
             hp = 20;
             speed = 2f; // 1 block per sekund
             color = Color.White;
             texture = Assets.RockEnemy;
+
+            hpbar = new Healthbar(hp,size);
         }
 
     }

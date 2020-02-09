@@ -14,6 +14,8 @@ namespace TowerDefenceGame {
             speed = 1f; // 1 block per sekund
             color = Color.White;
             texture = Assets.BigRockEnemy;
+
+            hpbar = new Healthbar(hp,size);
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace TowerDefenceGame {
     static class Player {
 
-        private static int life = 10;
+        public static int life = 10;
         public static bool dead = false;
 
         public static void subtractLife(int x) {

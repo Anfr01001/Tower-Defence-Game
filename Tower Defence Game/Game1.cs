@@ -10,6 +10,8 @@ namespace TowerDefenceGame {
 
         Menu BuyMeny;
 
+        Healthbar hpbar;
+
         bool canclick = true;
 
         public Game1() {
@@ -24,6 +26,8 @@ namespace TowerDefenceGame {
             Assets.LoadContent(Content);
             this.IsMouseVisible = true;
             BuyMeny = new Menu(new Vector2(800, 0), 150, 800);
+
+            hpbar = new Healthbar(Player.life, 200, 20);
 
             base.Initialize();
         }
@@ -67,6 +71,8 @@ namespace TowerDefenceGame {
                 TowerController.Update(gameTime);
 
                 EnemyController.Update(gameTime);
+
+                hpbar.Update(Player.life, new Vector2(20,20));
             } else {
                 Exit();
             }
@@ -84,6 +90,8 @@ namespace TowerDefenceGame {
             TowerController.Draw(spriteBatch);
             BuyMeny.draw(spriteBatch);
             Player.Draw(spriteBatch);
+
+            hpbar.Draw(spriteBatch);
 
             spriteBatch.End();
             base.Draw(gameTime);
