@@ -23,7 +23,8 @@ namespace TowerDefenceGame {
             BackGroundhight = hight;
 
             //Lägg till knappar
-            buttons.Add(new BuyBasictower("Tower", new Vector2(835, 20), 80));
+            buttons.Add(new BuyBasictower("BasicTower", new Vector2(835, 20), 80));
+            buttons.Add(new BuyLasertower("LaserTower", new Vector2(835, 120), 80));
 
         }
 

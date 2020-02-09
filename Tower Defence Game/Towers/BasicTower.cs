@@ -14,13 +14,13 @@ namespace TowerDefenceGame {
             rectangle = new Rectangle(pos.ToPoint(), new Point(50, 50));
             range = 200;
             damage = 15;
-            texture = Assets.TowerBasic;
+            texture = Assets.RockTower;
 
         }
         protected override void shoot(GameTime gameTime, EnemyBase target) {
             //Har det gått lång tid nog föt att skjuta ?
             if (gameTime.TotalGameTime.TotalSeconds > NextShot) {
-                TowerController.AddBullet(pos, target, 10, damage);
+                TowerShooting.NewBullet(pos, target, 15, damage);
                 NextShot = gameTime.TotalGameTime.TotalSeconds + timeToShoot;
             }
         }

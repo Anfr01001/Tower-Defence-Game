@@ -12,14 +12,14 @@ namespace TowerDefenceGame {
         private float speed = 10;
         private Vector2 pos;
         private Rectangle rectangle;
-        private Color color = Color.Red;
+        private Color color = Color.White;
         private EnemyBase target;
         private Vector2 direction;
         public bool dead = false;
         private int damage;
 
         public Bullet(Vector2 Startpos, int size, EnemyBase target, int damage) {
-            pos = Startpos;
+            pos = new Vector2(Startpos.X + 25, Startpos.Y + 25);
             this.size = size;
             this.target = target;
             this.damage = damage;
@@ -41,7 +41,7 @@ namespace TowerDefenceGame {
         }
 
         public void Draw(SpriteBatch spriteBatch) {
-            spriteBatch.Draw(Assets.Pixel, rectangle, color);
+            spriteBatch.Draw(Assets.ThrowingRock, rectangle, color);
         }
     }
 }

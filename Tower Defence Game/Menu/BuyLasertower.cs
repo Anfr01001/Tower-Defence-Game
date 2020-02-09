@@ -6,13 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TowerDefenceGame {
-    class BuyBasictower : Button {
-        public BuyBasictower(String text, Vector2 pos, int size) : base(text, pos, size) {
-            texture = Assets.RockTower;
+    class BuyLasertower : Button{
+        public BuyLasertower(String text, Vector2 pos, int size) : base(text, pos, size) {
+            texture = Assets.UFOTower;
         }
 
         public override void OnClick() {
-            TowerController.BoughtTower(1);
+            TowerController.BoughtTower(2);
         }
     }
 }

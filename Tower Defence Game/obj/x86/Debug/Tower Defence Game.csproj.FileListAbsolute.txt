@@ -90,3 +90,5 @@ C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\obj\x
 C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\obj\x86\Debug\Tower Defence Game.pdb
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\skullufo.xnb
 C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\skullufo.xnb
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\RockTower.xnb
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\ThrowingRock.xnb

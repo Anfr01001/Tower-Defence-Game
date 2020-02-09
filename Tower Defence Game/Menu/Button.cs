@@ -12,7 +12,7 @@ namespace TowerDefenceGame {
         protected int size;
         protected string text = "";
         public Rectangle rectangle;
-
+        public Texture2D texture = Assets.Pixel;
 
         public Button(String text, Vector2 pos, int size) {
             this.text = text;
@@ -27,7 +27,7 @@ namespace TowerDefenceGame {
 
 
         public void draw(SpriteBatch spriteBatch) {
-            spriteBatch.Draw(Assets.Pixel, rectangle, Color.WhiteSmoke);
+            spriteBatch.Draw(texture, rectangle, Color.White);
             spriteBatch.DrawString(Assets.textfont, text, pos, Color.Black);
 
         }

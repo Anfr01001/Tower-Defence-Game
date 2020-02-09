@@ -42,6 +42,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets.cs" />
+    <Compile Include="TowerShooting.cs" />
+    <Compile Include="Towers\Laser.cs" />
+    <Compile Include="Towers\LaserTower.cs" />
+    <Compile Include="Menu\BuyLasertower.cs" />
     <Compile Include="Towers\Bullet.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Towers\BasicTower.cs" />
