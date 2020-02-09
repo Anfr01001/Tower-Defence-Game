@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TowerDefenceGame {
     class BuyBasictower : Button {
-        public BuyBasictower(String text, Vector2 pos, int size) : base(text, pos, size) {
+        public BuyBasictower(String text, string price ,Vector2 pos, int size) : base(text, pos, size, price) {
             texture = Assets.RockTower;
         }
 

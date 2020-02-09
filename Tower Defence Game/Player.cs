@@ -11,6 +11,7 @@ namespace TowerDefenceGame {
 
         public static int life = 10;
         public static bool dead = false;
+        public static int Money = 100;
 
         public static void subtractLife(int x) {
             life -= x;
@@ -20,7 +21,7 @@ namespace TowerDefenceGame {
         }
 
         public static void Draw(SpriteBatch spriteBatch) {
-            spriteBatch.DrawString(Assets.textfont, life.ToString(), Vector2.Zero, Color.Black);
+            spriteBatch.DrawString(Assets.textfont, "Pengar: " + Money, new Vector2(835, 750), Color.Black);
         }
 
 

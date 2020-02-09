@@ -12,8 +12,10 @@ namespace TowerDefenceGame {
         public BasicEnemy(){
             size = 40;
             hp = 20;
+            Reward = 10;
             speed = 2f; // 1 block per sekund
             color = Color.White;
+
             texture = Assets.RockEnemy;
 
             hpbar = new Healthbar(hp,size);

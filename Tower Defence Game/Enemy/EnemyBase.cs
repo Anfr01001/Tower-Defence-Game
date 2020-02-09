@@ -26,6 +26,8 @@ namespace TowerDefenceGame {
 
         protected Healthbar hpbar;
 
+        protected int Reward = 10;
+
         public EnemyBase() {
 
             // Sortera ut paths så vi kan följa dem
@@ -57,6 +59,7 @@ namespace TowerDefenceGame {
 
             if (hp < 1) {
                 dead = true;
+                Player.Money += Reward;
             }
         }
 

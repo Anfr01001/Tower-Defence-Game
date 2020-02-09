@@ -13,6 +13,8 @@ namespace TowerDefenceGame {
         protected string text = "";
         public Rectangle rectangle;
         public Texture2D texture = Assets.Pixel;
+        private bool hasPrice = false;
+        private string price = "";
 
         public Button(String text, Vector2 pos, int size) {
             this.text = text;
@@ -20,6 +22,16 @@ namespace TowerDefenceGame {
             this.size = size;
             rectangle = new Rectangle((int)pos.X, (int)pos.Y, size, size);
         }
+
+        public Button(String text, Vector2 pos, int size, string price) {
+            this.text = text;
+            this.pos = pos;
+            this.size = size;
+            this.price = price;
+            rectangle = new Rectangle((int)pos.X, (int)pos.Y + 15, size, size);
+            hasPrice = true;
+        }
+
 
         public virtual void OnClick() {
             text = "klickad";
@@ -29,6 +41,8 @@ namespace TowerDefenceGame {
         public void draw(SpriteBatch spriteBatch) {
             spriteBatch.Draw(texture, rectangle, Color.White);
             spriteBatch.DrawString(Assets.textfont, text, pos, Color.Black);
+            if (hasPrice)
+                spriteBatch.DrawString(Assets.textfont, "Cost: "+ price, new Vector2(pos.X,pos.Y + size + 15), Color.Black);
 
         }
     }
