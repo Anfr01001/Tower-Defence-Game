@@ -17,10 +17,33 @@ namespace TowerDefenceGame {
 
         private Rectangle ColitionRectangle;
 
+        public bool isMainMenu = false;
+
+        //Main menyn
+        public Menu(Vector2 pos, int width, int hight, bool ismainmenu) {
+            this.pos = pos;
+            BackGorundwidth = width;
+            BackGroundhight = hight;
+
+            this.isMainMenu = ismainmenu;
+
+            buttons.Clear();
+
+            //Lägg till knappar
+            buttons.Add(new NextMap("New map", new Vector2(835, 20), 80));
+            buttons.Add(new StartButton("Start", new Vector2(835, 140), 80));
+
+        }
+
+        //Köp menyn
         public Menu(Vector2 pos, int width, int hight) {
             this.pos = pos;
             BackGorundwidth = width;
             BackGroundhight = hight;
+
+            buttons.Clear();
+
+            isMainMenu = false;
 
             //Lägg till knappar
             buttons.Add(new BuyBasictower("BasicTower", "100" ,new Vector2(835, 20), 80));

@@ -15,6 +15,7 @@ namespace TowerDefenceGame {
         public Texture2D texture = Assets.Pixel;
         private bool hasPrice = false;
         private string price = "";
+        protected Color color = Color.White;
 
         public Button(String text, Vector2 pos, int size) {
             this.text = text;
@@ -39,7 +40,10 @@ namespace TowerDefenceGame {
 
 
         public void draw(SpriteBatch spriteBatch) {
-            spriteBatch.Draw(texture, rectangle, Color.White);
+            if (texture == null)
+                texture = Assets.Pixel;
+
+            spriteBatch.Draw(texture, rectangle, color);
             spriteBatch.DrawString(Assets.textfont, text, pos, Color.Black);
             if (hasPrice)
                 spriteBatch.DrawString(Assets.textfont, "Cost: "+ price, new Vector2(pos.X,pos.Y + size + 15), Color.Black);

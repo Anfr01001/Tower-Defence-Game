@@ -8,7 +8,7 @@ namespace TowerDefenceGame {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        Menu BuyMeny;
+        Menu meny;
 
         Healthbar hpbar;
 
@@ -25,7 +25,7 @@ namespace TowerDefenceGame {
         protected override void Initialize() {
             Assets.LoadContent(Content);
             this.IsMouseVisible = true;
-            BuyMeny = new Menu(new Vector2(800, 0), 150, 800);
+            meny = new Menu(new Vector2(800, 0), 150, 800, true);
 
             hpbar = new Healthbar(Player.life, 200, 20);
 
@@ -51,30 +51,30 @@ namespace TowerDefenceGame {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            //För test
-            if (Keyboard.GetState().IsKeyDown(Keys.Space))
-                Map.BuildMap();
-            //towerController.BoughtTower(1);
-            //För test
+            // Om man klickar ge positionen till Menyn som kollar om man klickar på något
+            if (Mouse.GetState().LeftButton == ButtonState.Pressed && canclick) {
+                meny.MouseKlick(Mouse.GetState().Position);
+                canclick = false;
+            }
+
+            //Kan göras bättre
+            if (Mouse.GetState().LeftButton == ButtonState.Released)
+                canclick = true;
+
 
             if (!Player.dead) {
-                // Om man klickar ge positionen till Menyn som kollar om man klickar på något
-                if (Mouse.GetState().LeftButton == ButtonState.Pressed && canclick) {
-                    BuyMeny.MouseKlick(Mouse.GetState().Position);
-                    canclick = false;
-                }
-
-                //Kan göras bättre
-                if (Mouse.GetState().LeftButton == ButtonState.Released)
-                    canclick = true;
-
+                // Gör om meny till köp menyn
+                if (meny.isMainMenu)
+                    meny = new Menu(new Vector2(800, 0), 150, 800);
+                
                 TowerController.Update(gameTime);
 
                 EnemyController.Update(gameTime);
 
                 hpbar.Update(Player.life, new Vector2(20,20));
             } else {
-                
+                if (!meny.isMainMenu)
+                    meny = new Menu(new Vector2(800, 0), 150, 800, true);
             }
             base.Update(gameTime);
         }
@@ -88,7 +88,7 @@ namespace TowerDefenceGame {
             Map.DrawMap(spriteBatch);
             EnemyController.Draw(spriteBatch);
             TowerController.Draw(spriteBatch);
-            BuyMeny.draw(spriteBatch);
+            meny.draw(spriteBatch);
             Player.Draw(spriteBatch);
 
             hpbar.Draw(spriteBatch);
