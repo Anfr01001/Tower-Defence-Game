@@ -114,7 +114,6 @@ namespace TowerDefenceGame {
 
         public void Draw(SpriteBatch spriteBatch) {
             spriteBatch.Draw(texture, rectangle, color);
-            spriteBatch.DrawString(Assets.textfont, TempLista.ToString(), Vector2.Zero, Color.White);
         }
     }
 }

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Assets.cs" />
     <Compile Include="Healthbar.cs" />
+    <Compile Include="Enemy\SpiderEnemy.cs" />
     <Compile Include="Towers\Shooting\TowerShooting.cs" />
     <Compile Include="Towers\Shooting\Laser.cs" />
     <Compile Include="Towers\LaserTower.cs" />

@@ -16,6 +16,7 @@ namespace TowerDefenceGame {
 
         public static Texture2D RockEnemy;
         public static Texture2D BigRockEnemy;
+        public static Texture2D spider;
 
         public static SpriteFont textfont;
 
@@ -44,6 +45,7 @@ namespace TowerDefenceGame {
 
             RockEnemy = content.Load<Texture2D>("RockMonster");
             BigRockEnemy = content.Load<Texture2D>("BigRockMonster");
+            spider = content.Load<Texture2D>("spider");
 
             UFOTower = content.Load<Texture2D>("skullufo");
             RockTower = content.Load<Texture2D>("RockTower");

@@ -74,7 +74,7 @@ namespace TowerDefenceGame {
 
                 hpbar.Update(Player.life, new Vector2(20,20));
             } else {
-                Exit();
+                
             }
             base.Update(gameTime);
         }

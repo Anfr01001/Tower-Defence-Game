@@ -25,10 +25,19 @@ namespace TowerDefenceGame {
           
             if (gameTime.TotalGameTime.TotalSeconds >= timeToSpawn) {
                 //tiden har gått lägg till fiende
-                if (r.Next(0, 3) < 2)
-                    EnemyList.Add(new BasicEnemy());
-                else
-                    EnemyList.Add(new BigEnemy());
+
+                switch (r.Next(0, 5)) {
+                    case 1:
+                    case 2:
+                        EnemyList.Add(new BasicEnemy());
+                        break;
+                    case 3:
+                        EnemyList.Add(new BigEnemy());
+                        break;
+                    case 4:
+                        EnemyList.Add(new SpiderEnemy());
+                        break;
+                }
 
                 //Hur ofta spawn på en graf https://gyazo.com/d7dad2b6e75a63a6be4b233842007e7d
                 //Formlen måste ses igeom och förbättras

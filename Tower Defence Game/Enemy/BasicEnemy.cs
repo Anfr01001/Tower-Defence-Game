@@ -11,7 +11,7 @@ namespace TowerDefenceGame {
 
         public BasicEnemy(){
             size = 40;
-            hp = 20;
+            hp = 30;
             Reward = 10;
             speed = 2f; // 1 block per sekund
             color = Color.White;
