@@ -44,6 +44,9 @@ namespace TowerDefenceGame {
 
             if (Vector2.Distance(pos,target.pos) < 30) {
                 dead = true;
+
+                TowerShooting.NewExplotion(target.pos);
+
                 foreach (EnemyBase enemy in EnemyController.EnemyList) {
                     if (Vector2.Distance(pos,enemy.pos)  < 100) {
                         enemy.TakeDamage((float)(damage - (0.35* Vector2.Distance(pos, enemy.pos))));

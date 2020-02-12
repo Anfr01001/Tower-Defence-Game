@@ -57,6 +57,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets.cs" />
+    <Compile Include="Towers\Shooting\Explotion.cs" />
     <Compile Include="Menu\BuyMissiletower.cs" />
     <Compile Include="Healthbar.cs" />
     <Compile Include="Enemy\SpiderEnemy.cs" />

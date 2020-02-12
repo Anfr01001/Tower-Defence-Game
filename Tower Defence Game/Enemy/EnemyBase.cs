@@ -28,6 +28,8 @@ namespace TowerDefenceGame {
 
         protected int Reward = 10;
 
+        public Vector2 center;
+
         public EnemyBase() {
 
             // Sortera ut paths så vi kan följa dem
@@ -39,6 +41,7 @@ namespace TowerDefenceGame {
             //börja vid första blocket
             pos = Targets[0].center;
             target = Targets[pathblock].center;
+
         }
 
         public void Update(GameTime gameTime, int i) {

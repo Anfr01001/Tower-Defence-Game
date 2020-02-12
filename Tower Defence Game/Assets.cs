@@ -35,6 +35,8 @@ namespace TowerDefenceGame {
         public static Texture2D TurnLeft2;
         public static Texture2D TurnRight2;
 
+        public static Texture2D[] Explotioner = new Texture2D[62];
+
 
         public static void CreatePixel(GraphicsDevice device) {
             //Standrad texture för test
@@ -64,6 +66,9 @@ namespace TowerDefenceGame {
             TurnLeft2 = content.Load<Texture2D>("TurnLeft2");
             TurnRight2 = content.Load<Texture2D>("TurnRight2");
 
+            for (int i = 1; i < 62; i++) {
+                    Explotioner[i-1] = content.Load<Texture2D>("Explotion (" + i + ")");
+            }
 
         }
 
