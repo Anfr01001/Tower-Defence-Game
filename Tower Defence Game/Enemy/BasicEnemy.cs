@@ -13,7 +13,7 @@ namespace TowerDefenceGame {
             size = 40;
             hp = 30;
             Reward = 10;
-            speed = 2f; // 1 block per sekund
+            speed = 3f; // 1 block per sekund
             color = Color.White;
 
             texture = Assets.RockEnemy;

@@ -22,6 +22,8 @@ namespace TowerDefenceGame {
 
         public static Texture2D UFOTower;
         public static Texture2D RockTower;
+        public static Texture2D MissileTower;
+        public static Texture2D Missile;
 
         public static Texture2D ThrowingRock;
 
@@ -49,6 +51,8 @@ namespace TowerDefenceGame {
 
             UFOTower = content.Load<Texture2D>("skullufo");
             RockTower = content.Load<Texture2D>("RockTower");
+            MissileTower = content.Load<Texture2D>("MissileTower");
+            Missile = content.Load<Texture2D>("Missile");
 
             ThrowingRock = content.Load<Texture2D>("ThrowingRock");
 

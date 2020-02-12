@@ -12,7 +12,7 @@ namespace TowerDefenceGame {
             size = 30;
             hp = 20;
             Reward = 5;
-            speed = 3.5f; // block per sekund
+            speed = 4.5f; // block per sekund
             color = Color.White;
             texture = Assets.spider;
 

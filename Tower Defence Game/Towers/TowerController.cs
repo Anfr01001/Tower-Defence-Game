@@ -20,18 +20,25 @@ namespace TowerDefenceGame {
 
         public static void BoughtTower(int type) {
             switch (type) {
-                case 1:
+                case 1: //Normal
                     if(Player.Money >= 100) {
                         Player.Money -= 100;
                         TowerLista.Add(new BasicTower());
                     }
                     break;
 
-                case 2:
+                case 2: // Laser
                     if (Player.Money >= 150) {
                         Player.Money -= 150;
                         TowerLista.Add(new LaserTower());
                     } 
+                    break;
+
+                case 3: //Missile
+                    if (Player.Money >= 300) {
+                        Player.Money -= 300;
+                        TowerLista.Add(new MissileTower());
+                    }
                     break;
 
                 default:

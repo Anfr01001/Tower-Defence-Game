@@ -93,3 +93,5 @@ C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\W
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\RockTower.xnb
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\ThrowingRock.xnb
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\spider.xnb
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\Missile.xnb
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\MissileTower.xnb

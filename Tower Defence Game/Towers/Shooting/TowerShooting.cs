@@ -10,6 +10,7 @@ namespace TowerDefenceGame {
     static class TowerShooting {
         static List<Bullet> BulletLista = new List<Bullet>();
         static List<Laser> LaserLista = new List<Laser>();
+        static List<Missile> MissileList = new List<Missile>();
 
         public static void Update(GameTime gameTime) {
 
@@ -30,6 +31,16 @@ namespace TowerDefenceGame {
                     i--;
                 }
             }
+
+            for (int i = 0; i < MissileList.Count; i++) {
+                if (!MissileList[i].dead) {
+                    MissileList[i].Update(gameTime);
+                } else {
+                    MissileList.RemoveAt(i);
+                    i--;
+                }
+            }
+
         }
 
         public static void NewBullet(Vector2 Startpos, EnemyBase target, int size, int damage) {
@@ -40,6 +51,10 @@ namespace TowerDefenceGame {
             LaserLista.Add(new Laser(Startpos, target, range));
         }
 
+        public static void NewMissile(Vector2 Startpos, EnemyBase target, int size, int damage) {
+            MissileList.Add(new Missile(Startpos, size, target, damage));
+        }
+
         public static void Draw(SpriteBatch spriteBatch) {
             foreach (Bullet bullet in BulletLista) {
                 bullet.Draw(spriteBatch);
@@ -47,6 +62,10 @@ namespace TowerDefenceGame {
 
             foreach (Laser laser in LaserLista) {
                 laser.Draw(spriteBatch);
+            }
+
+            foreach (Missile missile in MissileList) {
+                missile.Draw(spriteBatch);
             }
         }
     }

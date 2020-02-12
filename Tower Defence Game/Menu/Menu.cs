@@ -48,6 +48,7 @@ namespace TowerDefenceGame {
             //Lägg till knappar
             buttons.Add(new BuyBasictower("BasicTower", "100" ,new Vector2(835, 20), 80));
             buttons.Add(new BuyLasertower("LaserTower", "150" ,new Vector2(835, 140), 80));
+            buttons.Add(new BuyMissiletower("MissileTower", "300", new Vector2(835, 260), 80));
 
         }
 
