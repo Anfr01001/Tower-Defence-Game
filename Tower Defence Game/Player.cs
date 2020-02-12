@@ -11,7 +11,7 @@ namespace TowerDefenceGame {
 
         public static int life = 10;
         public static bool dead = true;
-        public static int Money = 10000;
+        public static int Money = 100;
 
         public static void subtractLife(int x) {
             life -= x;

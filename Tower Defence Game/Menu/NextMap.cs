@@ -9,7 +9,7 @@ namespace TowerDefenceGame {
     class NextMap : Button{
 
         public NextMap(String text, Vector2 pos, int size) : base(text, pos, size) {
-            texture = Assets.Pixel;
+            texture = Assets.MapIcon;
         }
 
         public override void OnClick() {

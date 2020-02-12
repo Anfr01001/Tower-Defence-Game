@@ -37,7 +37,7 @@ namespace TowerDefenceGame {
             //Generera random en väg från toppen till botten 
             // 2steg i taget för att få en lite snyggare map
             while (tempY < 15) {
-                todo = r.Next(0, 6); // 5st lägen pga höger och vänster är 2(så att det blir större chans) (så mappen breder ut sig mer)
+                todo = r.Next(0, 8); // 5st lägen pga höger och vänster är 2(så att det blir större chans) (så mappen breder ut sig mer)
 
                 //Gör det 2 gånger för att få snyggare teräng inte lika hoppig
                 for (int i = 0; i <= 1; i++) {

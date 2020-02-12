@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace TowerDefenceGame {
     class StartButton : Button {
         public StartButton(String text, Vector2 pos, int size) : base(text, pos, size) {
-            texture = Assets.Pixel;
+            texture = Assets.PlayButton;
             color = Color.Green;
         }
 

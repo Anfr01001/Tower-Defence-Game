@@ -35,6 +35,8 @@ namespace TowerDefenceGame {
         public static Texture2D TurnLeft2;
         public static Texture2D TurnRight2;
 
+        public static Texture2D MapIcon;
+        public static Texture2D PlayButton;
         public static Texture2D[] Explotioner = new Texture2D[62];
 
 
@@ -65,6 +67,10 @@ namespace TowerDefenceGame {
             TurnRight = content.Load<Texture2D>("UpsideTurnright");
             TurnLeft2 = content.Load<Texture2D>("TurnLeft2");
             TurnRight2 = content.Load<Texture2D>("TurnRight2");
+
+            MapIcon = content.Load<Texture2D>("MapIcon");
+
+            PlayButton = content.Load<Texture2D>("PlayButton"); 
 
             for (int i = 1; i < 62; i++) {
                     Explotioner[i-1] = content.Load<Texture2D>("Explotion (" + i + ")");

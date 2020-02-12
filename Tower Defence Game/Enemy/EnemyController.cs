@@ -11,9 +11,7 @@ namespace TowerDefenceGame {
         private static double TimeBetweenEnemys = 1;
         private static double timeToSpawn = 1;
 
-        //Test
-        static double currtime;
-
+        private static bool randomSpawn = false;
 
 
         static Random r = new Random();
@@ -22,8 +20,15 @@ namespace TowerDefenceGame {
         public static List<EnemyBase> EnemyList = new List<EnemyBase>();
 
         static public void Update(GameTime gameTime) {
+
+            if (r.Next(0,200) == 1) {
+                randomSpawn = true;
+            } else {
+                randomSpawn = false;
+            }
+
           
-            if (gameTime.TotalGameTime.TotalSeconds >= timeToSpawn) {
+            if (gameTime.TotalGameTime.TotalSeconds >= timeToSpawn || randomSpawn) {
                 //tiden har gått lägg till fiende
 
                 switch (r.Next(0, 5)) {
@@ -45,8 +50,6 @@ namespace TowerDefenceGame {
 
                 timeToSpawn = gameTime.TotalGameTime.TotalSeconds + TimeBetweenEnemys;
             }
-
-            currtime = gameTime.TotalGameTime.TotalSeconds;
 
             for (int i = 0; i < EnemyList.Count; i++) {
                 if (!EnemyList[i].dead) {
