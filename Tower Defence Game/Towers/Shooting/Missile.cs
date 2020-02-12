@@ -7,15 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TowerDefenceGame {
-    class Missile {
-        private int size;
+    class Missile : ShootingBase {
         private float speed = 5;
-        private Vector2 pos;
-        private Rectangle rectangle;
-        private Color color = Color.White;
         private EnemyBase target;
         private Vector2 direction;
-        public bool dead = false;
         private int damage;
         Rectangle sourceRectangle;
         private float angle;
@@ -32,7 +27,7 @@ namespace TowerDefenceGame {
             sourceRectangle = new Rectangle(0, 0, size, size);
         }
 
-        public void Update(GameTime gameTime) {
+        public override void Update(GameTime gameTime) {
             //Från ditt shooterspel
             direction = target.pos - pos;
             direction.Normalize();
@@ -42,7 +37,7 @@ namespace TowerDefenceGame {
 
             angle = (float)(Math.Atan2(pos.Y - target.pos.Y, pos.X - target.pos.X)- Math.PI /2); // Radianer?!?!?!?!??!?!?!
 
-            if (Vector2.Distance(pos,target.pos) < 30) {
+            if (Vector2.Distance(pos,target.pos) < 10) {
                 dead = true;
 
                 TowerShooting.NewExplotion(target.pos);
@@ -56,7 +51,7 @@ namespace TowerDefenceGame {
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch) {
+        public override void Draw(SpriteBatch spriteBatch) {
             spriteBatch.Draw(Assets.Missile, pos, sourceRectangle, color, angle, origin, 1.0f, SpriteEffects.None, 1);
         }
 

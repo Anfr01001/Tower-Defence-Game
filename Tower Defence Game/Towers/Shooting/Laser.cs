@@ -7,11 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TowerDefenceGame {
-    class Laser {
+    class Laser : ShootingBase {
         private int width = 5;
         private int height;
-        private Vector2 pos;
-        private Color color = Color.Orange;
         private EnemyBase target;
         private int range;
 
@@ -19,15 +17,14 @@ namespace TowerDefenceGame {
         private Rectangle sourceRectangle;
         private Vector2 origin = new Vector2(0, 0);
 
-        public bool dead = false;
-
         public Laser(Vector2 Startpos, EnemyBase target, int range) {
             pos = new Vector2(Startpos.X + 25, Startpos.Y + 25);
             this.target = target;
             this.range = range;
+            color = Color.Orange;
         }
 
-        public void Update(GameTime gameTime) {
+        public override void Update(GameTime gameTime) {
 
             height = (int)Vector2.Distance(pos, target.pos);
             angle = (float)(Math.Atan2(pos.Y - target.pos.Y, pos.X - target.pos.X) + Math.PI/2); // Radianer?!?!?!?!??!?!?!
@@ -46,7 +43,7 @@ namespace TowerDefenceGame {
 
         }
 
-        public void Draw(SpriteBatch spriteBatch) {
+        public override void Draw(SpriteBatch spriteBatch) {
             // Rotationer från guiden http://rbwhitaker.wikidot.com/monogame-rotating-sprites
             spriteBatch.Draw(Assets.Pixel, pos, sourceRectangle, color, angle, origin, 1.0f, SpriteEffects.None, 1);
         }

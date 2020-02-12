@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace TowerDefenceGame {
     class MissileTower : TowerBase{
         private double NextShot = 0;
-        private double timeToShoot = 1;
+        private double timeToShoot = 1.7;
 
         public MissileTower() : base() {
             rectangle = new Rectangle(pos.ToPoint(), new Point(50, 50));

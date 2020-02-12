@@ -7,15 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TowerDefenceGame {
-    class Bullet {
-        private int size;
+    class Bullet : ShootingBase{
         private float speed = 10;
-        private Vector2 pos;
-        private Rectangle rectangle;
-        private Color color = Color.White;
         private EnemyBase target;
         private Vector2 direction;
-        public bool dead = false;
         private int damage;
 
         public Bullet(Vector2 Startpos, int size, EnemyBase target, int damage) {
@@ -26,7 +21,7 @@ namespace TowerDefenceGame {
             rectangle = new Rectangle((int)pos.X, (int)pos.Y, size, size);
         }
 
-        public void Update(GameTime gameTime) {
+        public override void Update(GameTime gameTime) {
             //Från ditt shooterspel
             direction = target.pos - pos;
             direction.Normalize();
@@ -40,7 +35,7 @@ namespace TowerDefenceGame {
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch) {
+        public override void Draw(SpriteBatch spriteBatch) {
             spriteBatch.Draw(Assets.ThrowingRock, rectangle, color);
         }
     }
