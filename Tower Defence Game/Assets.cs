@@ -25,6 +25,8 @@ namespace TowerDefenceGame {
         public static Texture2D MissileTower;
         public static Texture2D Missile;
 
+        public static Texture2D RangeCircle;
+
         public static Texture2D ThrowingRock;
 
         public static Texture2D Grass;
@@ -57,6 +59,8 @@ namespace TowerDefenceGame {
             RockTower = content.Load<Texture2D>("RockTower");
             MissileTower = content.Load<Texture2D>("MissileTower");
             Missile = content.Load<Texture2D>("Missile");
+
+            RangeCircle = content.Load<Texture2D>("RangeCircle");
 
             ThrowingRock = content.Load<Texture2D>("ThrowingRock");
 

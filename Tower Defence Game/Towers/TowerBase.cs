@@ -112,8 +112,16 @@ namespace TowerDefenceGame {
             return ((int)Math.Round(i / 50.0)) * 50;
         }
 
+
         public void Draw(SpriteBatch spriteBatch) {
             spriteBatch.Draw(texture, rectangle, color);
+
+            
+            if(beingPlaced)
+                spriteBatch.Draw(Assets.RangeCircle, new Rectangle((int)pos.X - (range * 2) / 2 + 25, (int)pos.Y - (range * 2) / 2 + 25, range * 2, range * 2), Color.White);
+
+
+
         }
     }
 }

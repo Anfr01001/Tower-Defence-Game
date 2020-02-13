@@ -97,7 +97,6 @@ namespace TowerDefenceGame {
 
             spriteBatch.Draw(texture, rectangle, color);
             hpbar.Draw(spriteBatch);
-
         }
 
 

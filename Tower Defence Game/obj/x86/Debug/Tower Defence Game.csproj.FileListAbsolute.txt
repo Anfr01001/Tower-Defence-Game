@@ -158,3 +158,4 @@ C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x8
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\Explotion (9).xnb
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\MapIcon.xnb
 C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\PlayButton.xnb
+C:\Users\banan\Source\Repos\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\RangeCircle.xnb
