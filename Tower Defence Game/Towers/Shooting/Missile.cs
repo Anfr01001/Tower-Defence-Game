@@ -18,7 +18,7 @@ namespace TowerDefenceGame {
 
 
         public Missile(Vector2 Startpos, int size, EnemyBase target, int damage) {
-            pos = new Vector2(Startpos.X + 25, Startpos.Y + 25);
+            pos = new Vector2(Startpos.X, Startpos.Y);
             this.size = size;
             this.target = target;
             this.damage = damage;

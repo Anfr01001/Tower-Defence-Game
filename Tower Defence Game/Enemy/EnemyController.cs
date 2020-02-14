@@ -31,7 +31,7 @@ namespace TowerDefenceGame {
             if (gameTime.TotalGameTime.TotalSeconds >= timeToSpawn || randomSpawn) {
                 //tiden har gått lägg till fiende
 
-                switch (r.Next(0, 5)) {
+                switch (r.Next(0, 6)) {
                     case 1:
                     case 2:
                         EnemyList.Add(new BasicEnemy());
@@ -41,6 +41,9 @@ namespace TowerDefenceGame {
                         break;
                     case 4:
                         EnemyList.Add(new SpiderEnemy());
+                        break;
+                    case 5:
+                        EnemyList.Add(new Greengrej());
                         break;
                 }
 

@@ -13,7 +13,7 @@ namespace TowerDefenceGame {
         public LaserTower() : base() {
             rectangle = new Rectangle(pos.ToPoint(), new Point(50, 50));
             range = 200;
-            damage = 20;
+            damage = 14;
             texture = Assets.UFOTower;
 
         }

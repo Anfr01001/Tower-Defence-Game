@@ -57,6 +57,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets.cs" />
+    <Compile Include="Enemy\Greengrej.cs" />
     <Compile Include="Towers\Shooting\ShootingBase.cs" />
     <Compile Include="Towers\Shooting\Explotion.cs" />
     <Compile Include="Menu\BuyMissiletower.cs" />
@@ -101,6 +102,7 @@
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
+    <None Include="Content\Text.spritefont" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
