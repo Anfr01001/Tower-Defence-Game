@@ -9,7 +9,9 @@ using Microsoft.Xna.Framework.Input;
 
 namespace TowerDefenceGame {
     class TowerBase {
-        //Fixa så att knappen bara pangar en gång
+		//Fixa så att knappen bara pangar en gång
+
+		public bool dead = false;
 
         protected int damage = 0;
         protected Vector2 pos;
@@ -96,13 +98,27 @@ namespace TowerDefenceGame {
             pos = new Point(pos.X / 50, pos.Y / 50);
 
             if (pos.X <= 16) {
-                if (Map.MapArray[pos.X, pos.Y] != 0) {
-                    //Kan inte placera det är en väg här
-                } else {
-                    //Kan placera!
-                    Map.MapArray[pos.X, pos.Y] = 2;
-                    beingPlaced = false;
-                }
+
+				if(this is Bomb)
+				{
+					if(Map.MapArray[pos.X, pos.Y] == 1)
+					{
+						beingPlaced = false;
+					}
+				}
+				else
+				{
+					if (Map.MapArray[pos.X, pos.Y] != 0)
+					{
+						//Kan inte placera det är en väg här
+					}
+					else
+					{
+						//Kan placera!
+						Map.MapArray[pos.X, pos.Y] = 2;
+						beingPlaced = false;
+					}
+				} 
             }
 
 

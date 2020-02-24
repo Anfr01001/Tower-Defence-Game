@@ -27,7 +27,7 @@ namespace TowerDefenceGame {
             sourceRectangle = new Rectangle(0, 0, size, size);
         }
 
-        public override void Update(GameTime gameTime) {
+		public override void Update(GameTime gameTime) {
             //Från ditt shooterspel
             direction = target.pos - pos;
             direction.Normalize();
@@ -52,7 +52,7 @@ namespace TowerDefenceGame {
         }
 
         public override void Draw(SpriteBatch spriteBatch) {
-            spriteBatch.Draw(Assets.Missile, pos, sourceRectangle, color, angle, origin, 1.0f, SpriteEffects.None, 1);
+				spriteBatch.Draw(Assets.Missile, pos, sourceRectangle, color, angle, origin, 1.0f, SpriteEffects.None, 1);
         }
 
     }

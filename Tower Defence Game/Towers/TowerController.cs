@@ -11,9 +11,18 @@ namespace TowerDefenceGame {
         static List<TowerBase> TowerLista = new List<TowerBase>();
 
         public static void Update(GameTime gameTime) {
-            foreach (TowerBase Tower in TowerLista) {
-                Tower.Update(gameTime);
-            }
+			for (int i = 0; i < TowerLista.Count; i++)
+			{
+				if (!TowerLista[i].dead)
+				{
+					TowerLista[i].Update(gameTime);
+				}
+				else
+				{
+					TowerLista.RemoveAt(i);
+					i--;
+				}
+			}
 
             TowerShooting.Update(gameTime);
         }
@@ -41,7 +50,15 @@ namespace TowerDefenceGame {
                     }
                     break;
 
-                default:
+				case 4: //Bomb
+					if (Player.Money >= 50)
+					{
+						Player.Money -= 50;
+						TowerLista.Add(new Bomb());
+					}
+					break;
+
+				default:
                     //något gick fel
                     break;
             }

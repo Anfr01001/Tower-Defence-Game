@@ -229,3 +229,4 @@ C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\W
 C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\spider.xnb
 C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\ThrowingRock.xnb
 C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\Greengrej.xnb
+C:\Users\Elev\Source\Repos\Anfr01001\Tower-Defence-Game\Tower Defence Game\bin\Windows\x86\Debug\Content\Dynamit.xnb

@@ -38,8 +38,12 @@ namespace TowerDefenceGame {
         public static void NewExplotion(Vector2 pos) {
             Projectiles.Add(new Explotion(pos));
         }
+		public static void NewBombExplode(Vector2 pos, int damage)
+		{
+			Projectiles.Add(new BombExplode(pos, damage));
+		}
 
-        public static void Draw(SpriteBatch spriteBatch) {
+		public static void Draw(SpriteBatch spriteBatch) {
             foreach (ShootingBase thing in Projectiles) {
                 thing.Draw(spriteBatch);
             }

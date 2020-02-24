@@ -49,8 +49,9 @@ namespace TowerDefenceGame {
             buttons.Add(new BuyBasictower("BasicTower", "100" ,new Vector2(835, 20), 80));
             buttons.Add(new BuyLasertower("LaserTower", "150" ,new Vector2(835, 140), 80));
             buttons.Add(new BuyMissiletower("MissileTower", "300", new Vector2(835, 260), 80));
+			buttons.Add(new BuyBomb("Bomb", "50", new Vector2(835, 600), 80));
 
-        }
+		}
 
         public void MouseKlick(Point pos) {
             ColitionRectangle = new Rectangle(pos.X, pos.Y, 1, 1);
